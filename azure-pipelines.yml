@@ -30,7 +30,7 @@ steps:
     script: |
       # Write your commands here
       
-      echo 'Hello world'
+      echo '$(Build.SourceVersionMessage)'
 
 - task: CopyFiles@2
   inputs:
