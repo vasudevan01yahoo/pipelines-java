@@ -38,3 +38,8 @@ steps:
     contents: '*helloworld.war*' 
     targetFolder: '$(Build.ArtifactStagingDirectory)'
 
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: $(Build.ArtifactStagingDirectory)
+    artifactName: MyBuildOutput
+
