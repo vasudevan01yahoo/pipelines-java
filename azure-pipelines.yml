@@ -32,21 +32,9 @@ steps:
       
       echo 'Hello world'
 
-- task: PublishBuildArtifacts@1
+- task: CopyFiles@2
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'droples'
-    publishLocation: 'Container'
+    sourceFolder: '/home/vsts/work/1/s/target'
+    contents: '*helloworld.war*' 
+    targetFolder: '$(Build.ArtifactStagingDirectory)'
 
-- task: CopyPublishBuildArtifacts@1
-  inputs:
-    Contents: 'helloworld.war'
-    ArtifactName: 'helloworld.war'
-    ArtifactType: 'Container'
-
-- task: DownloadBuildArtifacts@0
-  inputs:
-    buildType: 'current'
-    downloadType: 'single'
-    itemPattern: '*helloworld.war'
-    downloadPath: '$(System.ArtifactsDirectory)'
