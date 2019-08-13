@@ -43,17 +43,6 @@
     </plugins>
   </build>
 
-<repository>
-  <id>dev-azure-com-804134-804134</id>
-  <url>https://pkgs.dev.azure.com/804134/_packaging/804134/maven/v1</url>
-  <releases>
-    <enabled>true</enabled>
-  </releases>
-  <snapshots>
-    <enabled>true</enabled>
-  </snapshots>
-</repository>
-	
 	
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
